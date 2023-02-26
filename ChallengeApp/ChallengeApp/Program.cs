@@ -1,4 +1,6 @@
-﻿Employee user1 = new Employee("Adam", "Kamiński", 30);
+﻿using ChallengeApp;
+
+Employee user1 = new Employee("Adam", "Kamiński", 30);
 Employee user2 = new Employee("Dawid", "Marchewka", 42);
 Employee user3 = new Employee("Zenon", "Burak", 52);
 
@@ -37,30 +39,4 @@ foreach (var employee in employeess)
 
     } 
 }
-Console.WriteLine("Pracownik z największą ilością punktów" +  "\n" + userWithMaxResult.Name + " " + userWithMaxResult.Surname + " lat " + userWithMaxResult.Age);
-public class Employee
-{
-    private List<int> score = new List<int>();
-    public string Name { get; private set; }
-    public string Surname { get; private set; }
-    public int Age { get; private set; }
-
-    public Employee(string Name, string Surname, int Age)
-    {
-        this.Name = Name;
-        this.Surname = Surname;
-        this.Age = Age;
-    }
-
-    public void AddScore(int number)
-    {
-        this.score.Add(number);
-    }
-    public int Result
-    {
-        get
-        {
-            return this.score.Sum();
-        }
-    }
-}
+Console.WriteLine("Pracownik z największą ilością punktów" + "\n" + userWithMaxResult.Name + " " + userWithMaxResult.Surname + " lat " + userWithMaxResult.Age);
